@@ -1,4 +1,4 @@
-## ITCSS: Kĩ thuật bảo trì và mở rộng CSS
+## ITCSS: Kĩ thuật bảo trì và mở rộng ~~CSS~~ (CSS ARCHITECTURE) *Kiến trúc*
 Lubos Kmetko ngày 10 tháng 2 năm 2016 
 ### Làm thế nào để mở rộng và bảo trì CSS của bạn? Đó là vấn đề quan tâm của mọi nhà phát triển front-end. ITCSS là một câu trả lời.
 
@@ -14,11 +14,11 @@ Các lớp như sau:
  - Settings - Sử dụng với các tiền xử lý bao gồm phông chữ, định nghĩa màu sắc v.v..
  - Tool - Được sử dụng mixin và các hàm. Quan trọng là không được xuất bất kì css nào trong hai lớp đầu tiên.
  - Generic - cài lại và/hoặc chuẩn hóa style, định nghĩa box-sizing v.v. Đây là lớp đầu tiên thực sự tạo ra css.
- - Elements - Định kiểu cho các phần tử HTML cơ bản (như H1, A, v.v). These come with default styling from the browser so we can redefine them here.
+ - Elements - Định kiểu cho các phần tử HTML cơ bản (như H1, A, v.v). These come with default styling from the browser so we can redefine them here. **Những thứ này đi kèm với những thiết kế mặc định của trình duyệt vì vậy chúng ra có thể thiết kế lại chúng ở đây.**
  - Objects - Các selector dựa trên lớp, định nghĩa các mẫu thiết kế chưa được trang trí, ví dụ như đối tượng media từ OOCSS. 
  - Components - các thành phần UI đặc biệt. Đây là nơi đa số công việc diễn ra và thành phần UI của chúng tôi thường bao gồm đối tượng và thành phần.
  - Utilities - các lớp tiện ích và trợ giúp với khả năng ghi đè bất cứ thứ gì đi trước trong hình tam giác trên, ví dụ lớp hỗ trợ ẩn.
-Hình tam giác trên cũng cho thấy các style được trình bày bởi các selector được sắp xếp trong kết quả CSS: từ các style chung chung đến các kiểu rõ ràng, từ các selector có độ đặc hiệu thấp đến những kiểu cụ thể hơn (nhưng vẫn không quá cụ thể, không cho phép ID) và từ ảnh hưởng rộng đến ảnh hưởng ít.
+Hình tam giác trên cũng cho thấy các style được trình bày bởi các ~~selector~~ **bộ chọn** được sắp xếp trong kết quả CSS: ~~từ các style chung chung đến các kiểu rõ ràng, từ các selector có độ đặc hiệu thấp đến những kiểu cụ thể hơn~~ (from generic styles to explicit ones, from low-specificity selectors to more specific ones) **từ nhưng mẫu chung nhất cho đến những mẫu riêng biệt, từ những bộ chọn ít cụ thể đến những bộ chọn cụ thể hơn** (nhưng vẫn không quá cụ thể, ~~không cho phép ID~~ ( IDs are not allowed) **những id không được cho phép**) và từ ảnh hưởng rộng đến ảnh hưởng ít.
 ![inverted triangle](https://other.media/wp-content/uploads/2017/01/itcss_1.png)
 Tổ chức CSS như vậy giúp bạn tránh được những xung đột cụ thể và được trình bày bởi [một biểu đồ đặc hiệu lành mạnh ](https://jonassebastianohlsson.com/specificity-graph/)
  ### Tài liệu
@@ -27,9 +27,9 @@ Như thường lệ, vào điểm này tôi sẽ dẫn bạn đến các [trang 
  ITCSS hiện nãy vẫn còn một phần thuộc sở hữu độc quyền nên nếu bạn muốn hoàn toàn sử dụng nó, bạn nên đọc bài giới thiệu gốc từ net magazine. Tôi không ở đây để phán xét quyết định của tác giả (tôi cảm ơn ông ý vì đã chia sẻ kiến thức), nhưng tôi nghĩ điều này sẽ ngăn cản ITCSS được áp dụng rộng rãi (có thể đây chính là chủ ý của ông ấy).
  > Tính độc quyền một phần của ITCSS ngăn cản việc áp dụng rộng rãi hơn.
 
-Nếu bạn thực sự thích nó thì không nên vì điều này mà bạn ngừng sử dụng nó trong việc bắt đầu dự án. Xem các [vấn đề đặc biệt ](https://www.myfavouritemagazines.co.uk/design/net-magazine-back-issues/)  của net magazine để học các vấn đề cơ bản của ITCSS, và sau đó bạn có thể học từ các nguồn online và qua các ví dụ áp dụng nó trong các dự án thực tế.
+~~Nếu bạn thực sự thích nó thì không nên vì điều này mà bạn ngừng sử dụng nó trong việc bắt đầu dự án~~ (This shouldn’t prevent you from start to use it in your projects, though, if you are really interested in doing so) **Các bạn không nên vì điều này mà không bắt đầu sử dụng nó trong các dự án của mình nếu bạn thực sự thích nó** . Xem các [vấn đề đặc biệt ](https://www.myfavouritemagazines.co.uk/design/net-magazine-back-issues/)  của net magazine để học các vấn đề cơ bản của ITCSS, và sau đó bạn có thể học từ các nguồn online và qua các ví dụ áp dụng nó trong các dự án thực tế.
 ### Nguồn
-Tôi đã sử dụng ITCSS trong 4 dự án trước đây (bao gồm Xfive.co) và những nguồn dưới đây giúp toou hiểu về nó nhiều hơn:
+Tôi đã sử dụng ITCSS trong 4 dự án trước đây (bao gồm Xfive.co) và những nguồn dưới đây giúp ~~toou~~ **tìm** hiểu về nó nhiều hơn:
  - [Quản lý dự án CSS lớn với ITCSS](http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528) - giới thiệu ITCSS của Harry Roberts (bài báo gốc được xuất bản từ phiên bản báo tạp chí, mất 1 vài cột ở biểu đồ đặc thù và bộ tiền xử lý)
  - [Quản lý dự án web qui mô lớn với kĩ thuật CSS mới ITCSS](https://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731) - giới thiệu ITCSS và phỏng vấn Harry Roberts
  - [Harry Roberts – Quản lý dự án CSS với ITCSS ](https://www.youtube.com/watch?v=1OKZOV-iLj4) cuộc nói chuyện của Harry tại DaFED and [slide đi kèm](https://speakerdeck.com/dafed/managing-css-projects-with-itcss)
