@@ -1,4 +1,4 @@
-## ITCSS: Kĩ thuật bảo trì và mở rộng ~~CSS~~ (CSS ARCHITECTURE) *Kiến trúc*
+## ITCSS: Kĩ thuật bảo trì và mở rộng ~~CSS~~ (CSS ARCHITECTURE) *Kiến trúc CSS*
 Lubos Kmetko ngày 10 tháng 2 năm 2016 
 ### Làm thế nào để mở rộng và bảo trì CSS của bạn? Đó là vấn đề quan tâm của mọi nhà phát triển front-end. ITCSS là một câu trả lời.
 
