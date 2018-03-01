@@ -125,7 +125,7 @@ Bản chất tự tiên của ITCSS, đặc biệt khi kết hợp với  [ quy 
 ```
 Chú ý: Chúng ta sử dụng [các thư mục tách rời cho mỗi lớp](https://github.com/xfiveco/generator-chisel/tree/master/generators/app/templates/styles/itcss) tự động tải các định dạng thêm mới bằng  [Chisel](https://github.com/xfiveco/generator-chisel/)
  ##### Đối tượng sử dụng lại cho sự phát triển nhanh
- Các đối tượng của ITCSS là ứng cử viên hàng đầu cho việc xây dựng thư viện các thành phần dùng lại được nhằm phát triển front-end nhanh hơn. Các thành phần UI bao gồm các đối tượng chung và các thành phần đặc thù của dự án. Ví dụ, innuitcss là một framework dựa trên ITCSS,chứa  [một nhóm đối tượng](https://github.com/inuitcss/inuitcss/tree/develop/objects) bnhưng chủ  [một thành phần mẫu](https://github.com/inuitcss/inuitcss/tree/develop/components)
+ Các đối tượng của ITCSS là ứng cử viên hàng đầu cho việc xây dựng thư viện các thành phần dùng lại được nhằm phát triển front-end nhanh hơn. Các thành phần UI bao gồm các đối tượng chung và các thành phần đặc thù của dự án. Ví dụ, innuitcss là một framework dựa trên ITCSS,chứa  [một nhóm đối tượng](https://github.com/inuitcss/inuitcss/tree/develop/objects) nhưng chỉ  [một thành phần mẫu](https://github.com/inuitcss/inuitcss/tree/develop/components)
  ##### Hoạt hình
  Tôi khuyên bạn nên định nghĩa các hoạt ảnh chung như là các đối tượng, ví dụ như @keyframes o-fade-in trong file _objects.animations.scss
 
